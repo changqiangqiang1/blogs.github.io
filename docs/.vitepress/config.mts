@@ -39,4 +39,6 @@ export default defineConfig({
       lazyLoading: true,
     },
   },
+
+  base: "/blogs.github.io/",
 });
