@@ -3,30 +3,22 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "博客",
   description: "前端笔记",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   themeConfig: {
+    logo: "/favicon.ico",
     nav: [
       { text: "首页", link: "/" },
-      { 
+      {
         text: "前端",
         items: [
-          { text: "Vue", link: "/markdown-examples" },
+          { text: "Vue", link: "/webFront/vue-docs" },
           { text: "React", link: "/api-examples" },
         ]
-    },
+      },
+      { text: "Linux", link: "/docs/linux" },
     ],
-
-    // sidebar: [
-    //   {
-    //     text: "Examples",
-    //     items: [
-    //       { text: "Markdown Examples", link: "/markdown-examples" },
-    //       { text: "Runtime API Examples", link: "/api-examples" },
-    //       { text: "语法练习", link: "/grammarTest/test" },
-    //     ],
-    //   },
-    // ],
-
+    search: {
+      provider: 'local'
+    },
     socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
   },
 
@@ -40,5 +32,7 @@ export default defineConfig({
     },
   },
 
-  base: "/blogs.github.io/",
+  // 部署github 资源定位
+  // base: "/blogs.github.io/",
+  srcDir: './src',
 });

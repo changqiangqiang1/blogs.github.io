@@ -8,13 +8,13 @@ hero:
   actions:
     - theme: brand
       text: Vue文档
-      link: /markdown-examples
+      link: /docs/webFront/vue-docs/index
     - theme: alt
       text: React文档
       link: /api-examples
     - theme: brand
       text: 语法练习
-      link: ./grammarTest/test
+      link: /test/grammarTest
 
 head:
     - - meta
