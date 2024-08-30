@@ -1,0 +1,117 @@
+# 语法练习
+
+## 表格
+
+| name | age | color |
+| ---- | :-: | ----: |
+| 李四 | 19  |   red |
+
+## 表情
+
+:tada: :100:
+
+## 默认标题 / 自定义标题- type 后面增加标题
+
+::: info
+信息标题 This is an info box.
+:::
+
+::: tip
+This is a tip
+:::
+
+::: details 自定义标题
+详情可折叠
+其余: warning danger
+:::
+
+::: warning 警告
+警告
+:::
+
+## 编程语法
+
+```js
+export default {
+	name: "MyComponent",
+};
+```
+
+```html
+<ul>
+	<li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
+</ul>
+```
+
+```css
+div {
+	background: #fff;
+}
+```
+
+### 语法高亮
+
+1.多行：例如 {5-8}、{3-10}、{10-17}
+2.多个单行：例如 {4,7,9}
+3.多行与单行：例如 {4,7-13,16,23-27,40}
+4.也可以使用 // [!code highlight] 注释实现行高亮。
+
+```js{2}
+export default {
+    name:"MyComponent",
+}
+```
+
+### 代码聚焦
+```js
+export default {
+  data () {
+    return {
+      msg: 'Focused!' // [!code focus]
+    }
+  }
+}
+```
+---
+
+## 使用vue语法
+
+<!-- <script setup>
+import { ref } from 'vue'
+
+const count = ref(0)
+</script>
+
+## Markdown Content
+
+The count is: {{ count }}
+
+<button :class="$style.button" @click="count++">Increment</button>
+
+<style module>
+.button {
+  color: red;
+  font-weight: bold;
+}
+</style> -->
+
+<script setup>
+import { useData } from 'vitepress'
+
+const { page } = useData()
+</script>
+
+<pre>{{ page }}</pre>
+
+## 代码转义
+
+This <span v-pre>{{ will be displayed as-is }}</span>
+
+::: v-pre
+{{ This will be displayed as-is }}
+:::
+
+## 不转义
+```js-vue
+Hellow {{1 + 1}}
+```

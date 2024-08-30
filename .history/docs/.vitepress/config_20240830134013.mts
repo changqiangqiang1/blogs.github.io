@@ -1,10 +1,12 @@
 import { defineConfig } from "vitepress";
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "博客",
   description: "前端笔记",
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "/public/favicon.ico" }]],
   themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
       { 
