@@ -5,6 +5,9 @@ hero:
   name: "前端笔记"
   text: "My Blogs"
   tagline: 记录前端笔记
+  image:
+    src: /back_img.jpg
+    alt: VitePress
   actions:
     - theme: brand
       text: Vue文档

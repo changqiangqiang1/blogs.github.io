@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-
+import TextAnimation from "./cssComponent/index.vue"
 const count = ref(0)
 </script>
 
@@ -9,12 +9,17 @@ const count = ref(0)
 ---
 
 1. 变量算法
-   ::: info
+::: info 操作变量
 
 The count is: {{ count }}
 
 <button type="brand" :class="$style.button" @click="count++">点击++</button>
 
+:::
+
+2. vue组件插入
+::: info 组件
+<TextAnimation/>
 :::
 
 <style lang='less'  module>
